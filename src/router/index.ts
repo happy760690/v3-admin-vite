@@ -157,6 +157,22 @@ export const constantRoutes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: "/devices",
+    component: Layouts,
+    children: [
+      {
+        path: "",
+        component: () => import("@/pages/devices/index.vue"),
+        name: "Devices",
+        meta: {
+          title: "设备管理",
+          elIcon: "Monitor",
+          keepAlive: true
+        }
+      }
+    ]
+  },
+  {
     path: "/link",
     meta: {
       title: "文档链接",
